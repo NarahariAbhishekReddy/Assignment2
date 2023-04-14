@@ -31,7 +31,7 @@ population_stats <- data.frame(matrix(NA, nrow = 1, ncol = 3,
 # Loop to generate samples and calculate statistics
 for (i in 1:n_samples) {
   # Generate a sample with replacement
-  sample <- df[sample(1:nrow(df), n_obs_per_sample, replace = TRUE), ]
+  sample <- df[sample(1:nrow(df), no_obs_per_sample, replace = TRUE), ]
   
   # Calculate statistics for the sample
   sample_stats[i, ] <- calculate_stats(sample$BloodPressure)
